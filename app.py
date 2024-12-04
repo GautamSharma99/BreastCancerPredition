@@ -1,10 +1,10 @@
 import uvicorn
-from fastapi import FASTAPI
+from fastapi import FastAPI
 import pickle
 import pandas as pd
 import numpy as np
 from parameters import params
-app = FASTAPI()
+app = FastAPI()
 pickle_in = open('regmodel.pkl','rb')
 regmodel = pickle.load(pickle_in)
 @app.get('/')
